@@ -1,0 +1,49 @@
+# Supabase pauses free projects after 1 week of inactivity. A pick'em is used
+# roughly once a week, which sits right on that line — one quiet week (a bye,
+# the offseason, nobody checking the board) and the database goes to sleep,
+# and the app starts failing to save until someone restores it by hand.
+#
+# This pings the REST endpoint every 3 days to keep the project counted as
+# active. GitHub Actions is free and unmetered on public repositories.
+#
+# The key below is the publishable key that already ships in config.js — it is
+# public by design and protected by row-level security, so it is not a secret.
+
+name: Keep Supabase awake
+
+on:
+  schedule:
+    - cron: "17 9 */3 * *"   # 09:17 UTC, every 3rd day
+  workflow_dispatch:          # and a manual "Run workflow" button
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping PostgREST
+        run: |
+          URL="https://kfistcvyygcprfslyiyh.supabase.co/rest/v1/picks?select=season&limit=1"
+          KEY="sb_publishable_Betigpyl9AvmO7zfHWMCOg_ghcZT_p4"
+
+          code=$(curl -sS -o /tmp/body -w '%{http_code}' \
+                   -H "apikey: $KEY" \
+                   -H "Authorization: Bearer $KEY" \
+                   "$URL" || echo 000)
+
+          # A publishable key in the Authorization header can be rejected as a
+          # malformed JWT; fall back to apikey alone, same as the app does.
+          if [ "$code" = "401" ] || [ "$code" = "403" ]; then
+            echo "retrying with apikey only (status was $code)"
+            code=$(curl -sS -o /tmp/body -w '%{http_code}' \
+                     -H "apikey: $KEY" "$URL" || echo 000)
+          fi
+
+          echo "status: $code"
+          head -c 300 /tmp/body || true
+          echo
+
+          if [ "$code" != "200" ]; then
+            echo "::error::Supabase ping failed with status $code — the project may be paused or the key may have been rotated."
+            exit 1
+          fi
+          echo "Supabase is awake."
