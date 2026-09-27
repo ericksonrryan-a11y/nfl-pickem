@@ -417,7 +417,7 @@
      "awayRank": null,
      "homeRank": null,
      "kickoff": "2026-09-27T17:00:00Z",
-     "spread": 3,
+     "spread": 1.5,
      "total": 42.5,
      "network": "CBS"
     },
@@ -432,7 +432,7 @@
      "awayRank": null,
      "homeRank": null,
      "kickoff": "2026-09-27T17:00:00Z",
-     "spread": 11.5,
+     "spread": 10,
      "total": 45.5,
      "network": "CBS"
     },
@@ -448,7 +448,7 @@
      "homeRank": null,
      "kickoff": "2026-09-27T17:00:00Z",
      "spread": -2.5,
-     "total": 39.5,
+     "total": 37.5,
      "network": "CBS"
     },
     {
@@ -477,7 +477,7 @@
      "awayRank": null,
      "homeRank": null,
      "kickoff": "2026-09-27T17:00:00Z",
-     "spread": 7,
+     "spread": 8.5,
      "total": 40.5,
      "network": "FOX"
     },
@@ -507,8 +507,8 @@
      "awayRank": null,
      "homeRank": null,
      "kickoff": "2026-09-27T20:05:00Z",
-     "spread": -8.5,
-     "total": 47.5,
+     "spread": -7.5,
+     "total": 48.5,
      "network": "FOX"
     },
     {
@@ -537,8 +537,8 @@
      "awayRank": null,
      "homeRank": null,
      "kickoff": "2026-09-27T20:25:00Z",
-     "spread": 3.5,
-     "total": 52.5,
+     "spread": 3,
+     "total": 53.5,
      "network": "CBS"
     },
     {
@@ -552,8 +552,8 @@
      "awayRank": null,
      "homeRank": null,
      "kickoff": "2026-09-27T20:25:00Z",
-     "spread": -3,
-     "total": 44.5,
+     "spread": -3.5,
+     "total": 43.5,
      "network": "CBS"
     },
     {
@@ -567,8 +567,8 @@
      "awayRank": null,
      "homeRank": null,
      "kickoff": "2026-09-28T00:20:00Z",
-     "spread": 2.5,
-     "total": 45.5,
+     "spread": 1.5,
+     "total": 43.5,
      "network": "NBC"
     },
     {
@@ -582,8 +582,8 @@
      "awayRank": null,
      "homeRank": null,
      "kickoff": "2026-09-29T00:15:00Z",
-     "spread": 4.5,
-     "total": 41.5,
+     "spread": 3.5,
+     "total": 42.5,
      "network": "ESPN"
     }
    ],
