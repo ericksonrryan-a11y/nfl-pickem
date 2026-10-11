@@ -1102,7 +1102,7 @@
      "homeRank": null,
      "kickoff": "2026-10-11T17:00:00Z",
      "spread": 7,
-     "total": 42.5,
+     "total": 44.5,
      "network": "Fox"
     },
     {
@@ -1192,7 +1192,7 @@
      "homeRank": null,
      "kickoff": "2026-10-11T20:05:00Z",
      "spread": 3.5,
-     "total": 42.5,
+     "total": 41.5,
      "network": "CBS"
     },
     {
@@ -1221,7 +1221,7 @@
      "awayRank": null,
      "homeRank": null,
      "kickoff": "2026-10-11T20:25:00Z",
-     "spread": -2.5,
+     "spread": -3,
      "total": 46.5,
      "network": "Fox"
     },
@@ -1236,7 +1236,7 @@
      "awayRank": null,
      "homeRank": null,
      "kickoff": "2026-10-12T00:20:00Z",
-     "spread": -3.5,
+     "spread": -3,
      "total": 43.5,
      "network": "NBC"
     },
