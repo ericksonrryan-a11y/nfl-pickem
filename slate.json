@@ -1827,7 +1827,7 @@
      "awayRank": null,
      "homeRank": null,
      "kickoff": "2026-10-25T20:25:00Z",
-     "spread": 4.5,
+     "spread": 3.5,
      "total": 48.5,
      "network": "Fox"
     },
@@ -1842,7 +1842,7 @@
      "awayRank": null,
      "homeRank": null,
      "kickoff": "2026-10-26T00:20:00Z",
-     "spread": -2.5,
+     "spread": -3,
      "total": 42.5,
      "network": "NBC"
     },
@@ -1858,7 +1858,7 @@
      "homeRank": null,
      "kickoff": "2026-10-27T00:15:00Z",
      "spread": 4.5,
-     "total": 44.5,
+     "total": 43.5,
      "network": "ESPN"
     }
    ],
